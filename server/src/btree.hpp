@@ -16,13 +16,14 @@ namespace linn {
 #define DEGREE 4096
 
 typedef bool tree_node_type;
-    
+
 const tree_node_type tree_node_leaf = true;
 const tree_node_type tree_node_body = false;
-    
-template <class  _RandomAccessIter, class T>
-int index(const _RandomAccessIter begin, const _RandomAccessIter end, const T &key) {
-    int low = 0, high = end - begin;
+
+template <class _RandomAccessIter, class T>
+int index(const _RandomAccessIter begin, const _RandomAccessIter end,
+          const T &key) {
+  long low = 0, high = std::distance(begin, end);
   while (low != high) {
     int mid = (high + low) / 2;
     if (begin[mid] < key) {
@@ -147,8 +148,8 @@ public:
 private:
   void _insert_leaf(const K &key, const V &value) {
     auto up = std::upper_bound(_keys.begin(), _keys.end(), key);
-   // int distance = std::distance(_keys.begin(), up);
-      int distance = index(_keys.begin(), _keys.end(), key);
+    // int distance = std::distance(_keys.begin(), up);
+    int distance = index(_keys.begin(), _keys.end(), key);
     _keys.insert(up, key);
     _btree_data_type *newLeafNode = new _btree_data_type(value);
     if (!_data.empty()) {
@@ -202,10 +203,12 @@ template <class K, class V> class tree {
   _btree_node_type *root;
   _btree_data_type *tail;
 
+  int _size;
+
 public:
   typedef btree_iterator<V> iterator;
 
-  tree() : root(nullptr) { tail = nullptr; }
+  tree() : root(nullptr), tail(nullptr), _size(0) {}
   ~tree() {
     if (root != nullptr) {
       delete root;
@@ -236,11 +239,13 @@ public:
       }
       root->insert(key, value);
     }
+    ++_size;
   }
   void remove(const K &key) {
     if (root == nullptr) {
     } else {
       root->remove(key);
+      --_size;
     }
   }
 
@@ -253,6 +258,8 @@ public:
   }
   iterator begin() const { return iterator(tail->next); }
   iterator end() const { return iterator(tail); }
+
+  int size() const { return _size; }
 };
 
 } // namespace linn
