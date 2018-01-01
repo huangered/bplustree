@@ -9,22 +9,11 @@
 #ifndef linn_space_hpp
 #define linn_space_hpp
 
+#include "aux.h"
 #include "buffer.hpp"
 #include <iostream>
+#include "page_segment.hpp"
 
-namespace linn {
-typedef unsigned int uint;
-
-struct page_segment {
-  uint checksum;
-  uint space_offset;
-  uint pre_page_ptr;
-  uint next_page_ptr;
-  uint last_lsn;
-  uint page_type;
-  uint lsn;
-  uint space_id;
-};
 struct page_header {
   uint slot;
   uint free_space_ptr;
@@ -46,8 +35,8 @@ struct record {
   int len;
   int owned;
 
-    uint type;
-    
+  uint type;
+
   int key;
   int value;
   record *next;
@@ -74,7 +63,7 @@ private:
   uint page_checksum;
 
 public:
-  page(linn::buffer *buff) {
+  page(class ::buffer *buff) {
     buffer = buff;
     init();
   }
@@ -105,7 +94,7 @@ private:
     supremum->next = nullptr;
   }
   void init_record(record **rec, char *name, int len) {
-    *rec = new linn::record();
+    *rec = new record();
     (*rec)->name = name;
     (*rec)->len = len;
   }
@@ -122,5 +111,5 @@ private:
     }
   }
 };
-} // namespace linn
+
 #endif /* linn_space_hpp */

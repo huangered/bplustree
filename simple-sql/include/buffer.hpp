@@ -10,24 +10,22 @@
 #define buffer_hpp
 
 #include <new>
+#include "aux.h"
 
-namespace linn {
-typedef unsigned char byte;
-
+// simple buffer class, will enhance in the future
 class buffer {
 private:
   byte *data;
-  unsigned int size;
+  uint len;
 
 public:
-  buffer(unsigned int size) : size(size) {
-    data = (byte *)malloc(size * sizeof(byte));
+    buffer(uint len):len(len) {
+    data = (byte *)malloc(len * sizeof(byte));
   }
   ~buffer() { free(data); }
   inline byte *getBuffer() const { return data; }
 
-  inline unsigned int getSize() const { return size; }
+  inline uint length() const { return len; }
 };
-} // namespace linn
 
 #endif /* buffer_hpp */

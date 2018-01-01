@@ -105,7 +105,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		365140811FDA684400972773 /* raft */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = raft; sourceTree = BUILT_PRODUCTS_DIR; };
+		365140811FDA684400972773 /* simple-sql */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "simple-sql"; sourceTree = BUILT_PRODUCTS_DIR; };
 		365140831FDA684400972773 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3651408A1FDE270E00972773 /* server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
 		3651408B1FDE270E00972773 /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = server.hpp; sourceTree = "<group>"; };
@@ -120,10 +120,13 @@
 		6342F04F1FFA225600109BB4 /* aux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aux.h; sourceTree = "<group>"; };
 		6342F0501FFA236B00109BB4 /* tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
 		6342F0511FFA236B00109BB4 /* tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tree.hpp; sourceTree = "<group>"; };
+		6342F0551FFA814C00109BB4 /* index.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = index.hpp; sourceTree = "<group>"; };
+		6342F0561FFA81D200109BB4 /* record.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = record.hpp; sourceTree = "<group>"; };
+		6342F0571FFA874200109BB4 /* page_segment.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = page_segment.hpp; sourceTree = "<group>"; };
 		6343476D1FF9143D00732B89 /* buffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
 		6343476E1FF9143D00732B89 /* buffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer.hpp; sourceTree = "<group>"; };
-		634347701FF9158B00732B89 /* buffer_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer_test.h; sourceTree = "<group>"; };
-		635D42E11FF680C700A14D6C /* test2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2.h; sourceTree = "<group>"; };
+		634347701FF9158B00732B89 /* buffer_test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer_test.hpp; sourceTree = "<group>"; };
+		635D42E11FF680C700A14D6C /* page_segment_test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = page_segment_test.hpp; sourceTree = "<group>"; };
 		635D42E21FF6816100A14D6C /* page.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = page.cpp; sourceTree = "<group>"; };
 		635D42E31FF6816100A14D6C /* page.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = page.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +164,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		365140821FDA684400972773 /* raft */ = {
+		365140821FDA684400972773 /* simple-sql */ = {
 			isa = PBXGroup;
 			children = (
 				6342F0541FFA238100109BB4 /* tree */,
@@ -170,7 +173,7 @@
 				634347711FF9188A00732B89 /* include */,
 				365140831FDA684400972773 /* main.cpp */,
 			);
-			path = raft;
+			path = "simple-sql";
 			sourceTree = "<group>";
 		};
 		3660C61E1FB7579C00D51018 = {
@@ -178,7 +181,7 @@
 			children = (
 				3660C6291FB7579C00D51018 /* server */,
 				3668FB341FD03FF70031D15C /* client */,
-				365140821FDA684400972773 /* raft */,
+				365140821FDA684400972773 /* simple-sql */,
 				36CADAF41FECAA2100D6FDCD /* test */,
 				3660C6281FB7579C00D51018 /* Products */,
 				36CADB491FECAC5C00D6FDCD /* Frameworks */,
@@ -190,7 +193,7 @@
 			children = (
 				3660C6271FB7579C00D51018 /* server */,
 				3668FB331FD03FF70031D15C /* client */,
-				365140811FDA684400972773 /* raft */,
+				365140811FDA684400972773 /* simple-sql */,
 				36CADAF31FECAA2100D6FDCD /* test */,
 			);
 			name = Products;
@@ -227,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				36CADAF51FECAA2100D6FDCD /* main.cpp */,
-				635D42E11FF680C700A14D6C /* test2.h */,
-				634347701FF9158B00732B89 /* buffer_test.h */,
+				635D42E11FF680C700A14D6C /* page_segment_test.hpp */,
+				634347701FF9158B00732B89 /* buffer_test.hpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -252,9 +255,12 @@
 		634347711FF9188A00732B89 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				635D42E31FF6816100A14D6C /* page.hpp */,
-				6343476E1FF9143D00732B89 /* buffer.hpp */,
 				6342F04F1FFA225600109BB4 /* aux.h */,
+				6343476E1FF9143D00732B89 /* buffer.hpp */,
+				6342F0551FFA814C00109BB4 /* index.hpp */,
+				6342F0571FFA874200109BB4 /* page_segment.hpp */,
+				635D42E31FF6816100A14D6C /* page.hpp */,
+				6342F0561FFA81D200109BB4 /* record.hpp */,
 				6342F0511FFA236B00109BB4 /* tree.hpp */,
 			);
 			path = include;
@@ -279,9 +285,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		365140801FDA684400972773 /* raft */ = {
+		365140801FDA684400972773 /* simple-sql */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 365140871FDA684400972773 /* Build configuration list for PBXNativeTarget "raft" */;
+			buildConfigurationList = 365140871FDA684400972773 /* Build configuration list for PBXNativeTarget "simple-sql" */;
 			buildPhases = (
 				3651407D1FDA684400972773 /* Sources */,
 				3651407E1FDA684400972773 /* Frameworks */,
@@ -291,9 +297,9 @@
 			);
 			dependencies = (
 			);
-			name = raft;
+			name = "simple-sql";
 			productName = raft;
-			productReference = 365140811FDA684400972773 /* raft */;
+			productReference = 365140811FDA684400972773 /* simple-sql */;
 			productType = "com.apple.product-type.tool";
 		};
 		3660C6261FB7579C00D51018 /* server */ = {
@@ -397,7 +403,7 @@
 			targets = (
 				3660C6261FB7579C00D51018 /* server */,
 				3668FB321FD03FF70031D15C /* client */,
-				365140801FDA684400972773 /* raft */,
+				365140801FDA684400972773 /* simple-sql */,
 				369B6B241FDA5F3E00042319 /* all */,
 				36CADAF21FECAA2100D6FDCD /* test */,
 			);
@@ -446,7 +452,7 @@
 /* Begin PBXTargetDependency section */
 		365140891FDA7D3100972773 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 365140801FDA684400972773 /* raft */;
+			target = 365140801FDA684400972773 /* simple-sql */;
 			targetProxy = 365140881FDA7D3100972773 /* PBXContainerItemProxy */;
 		};
 		369B6B291FDA5F4D00042319 /* PBXTargetDependency */ = {
@@ -655,7 +661,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		365140871FDA684400972773 /* Build configuration list for PBXNativeTarget "raft" */ = {
+		365140871FDA684400972773 /* Build configuration list for PBXNativeTarget "simple-sql" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				365140851FDA684400972773 /* Debug */,

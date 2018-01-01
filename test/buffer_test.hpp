@@ -13,11 +13,11 @@
 #include "buffer.hpp"
 
 namespace {
-    TEST(BufferTest, init) {
-        
-        linn::buffer *buffer = new linn::buffer(10);
-        EXPECT_EQ(10, buffer->getSize());
-    }
+//    TEST(BufferTest, init) {
+//        
+//        linn::buffer *buffer = new linn::buffer(10);
+//        EXPECT_EQ(10, buffer->getSize());
+//    }
 }
 
 
