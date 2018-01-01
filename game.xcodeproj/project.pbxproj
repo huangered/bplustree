@@ -29,6 +29,9 @@
 		3668FB361FD03FF70031D15C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3668FB351FD03FF70031D15C /* main.cpp */; };
 		36CADAF61FECAA2100D6FDCD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36CADAF51FECAA2100D6FDCD /* main.cpp */; };
 		36CADB701FECB77A00D6FDCD /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CADB711FECB77A00D6FDCD /* gtest.framework */; };
+		6342F0521FFA236B00109BB4 /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6342F0501FFA236B00109BB4 /* tree.cpp */; };
+		6343476F1FF9143D00732B89 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6343476D1FF9143D00732B89 /* buffer.cpp */; };
+		635D42E41FF6816100A14D6C /* page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 635D42E21FF6816100A14D6C /* page.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,15 @@
 		36CADAF51FECAA2100D6FDCD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		36CADB711FECB77A00D6FDCD /* gtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = gtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE2CF51FC425EB00AE3AE4 /* btree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = btree.hpp; sourceTree = "<group>"; };
+		6342F04F1FFA225600109BB4 /* aux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aux.h; sourceTree = "<group>"; };
+		6342F0501FFA236B00109BB4 /* tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
+		6342F0511FFA236B00109BB4 /* tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tree.hpp; sourceTree = "<group>"; };
+		6343476D1FF9143D00732B89 /* buffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
+		6343476E1FF9143D00732B89 /* buffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer.hpp; sourceTree = "<group>"; };
+		634347701FF9158B00732B89 /* buffer_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer_test.h; sourceTree = "<group>"; };
+		635D42E11FF680C700A14D6C /* test2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2.h; sourceTree = "<group>"; };
+		635D42E21FF6816100A14D6C /* page.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = page.cpp; sourceTree = "<group>"; };
+		635D42E31FF6816100A14D6C /* page.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = page.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +164,10 @@
 		365140821FDA684400972773 /* raft */ = {
 			isa = PBXGroup;
 			children = (
+				6342F0541FFA238100109BB4 /* tree */,
+				634347731FF918AC00732B89 /* page */,
+				634347721FF9189800732B89 /* buffer */,
+				634347711FF9188A00732B89 /* include */,
 				365140831FDA684400972773 /* main.cpp */,
 			);
 			path = raft;
@@ -211,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				36CADAF51FECAA2100D6FDCD /* main.cpp */,
+				635D42E11FF680C700A14D6C /* test2.h */,
+				634347701FF9158B00732B89 /* buffer_test.h */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -221,6 +239,41 @@
 				36CADB711FECB77A00D6FDCD /* gtest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6342F0541FFA238100109BB4 /* tree */ = {
+			isa = PBXGroup;
+			children = (
+				6342F0501FFA236B00109BB4 /* tree.cpp */,
+			);
+			path = tree;
+			sourceTree = "<group>";
+		};
+		634347711FF9188A00732B89 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				635D42E31FF6816100A14D6C /* page.hpp */,
+				6343476E1FF9143D00732B89 /* buffer.hpp */,
+				6342F04F1FFA225600109BB4 /* aux.h */,
+				6342F0511FFA236B00109BB4 /* tree.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		634347721FF9189800732B89 /* buffer */ = {
+			isa = PBXGroup;
+			children = (
+				6343476D1FF9143D00732B89 /* buffer.cpp */,
+			);
+			path = buffer;
+			sourceTree = "<group>";
+		};
+		634347731FF918AC00732B89 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				635D42E21FF6816100A14D6C /* page.cpp */,
+			);
+			path = page;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,7 +409,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6343476F1FF9143D00732B89 /* buffer.cpp in Sources */,
+				6342F0521FFA236B00109BB4 /* tree.cpp in Sources */,
 				365140841FDA684400972773 /* main.cpp in Sources */,
+				635D42E41FF6816100A14D6C /* page.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +637,7 @@
 		36CADAF71FECAA2100D6FDCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -589,6 +646,7 @@
 		36CADAF81FECAA2100D6FDCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

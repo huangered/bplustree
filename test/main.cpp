@@ -8,6 +8,8 @@
 
 #include "btree.hpp"
 #include "gtest/gtest.h"
+#include "test2.h"
+#include "buffer_test.h"
 
 namespace {
 TEST(BtreeTest, Add) {
