@@ -9,21 +9,21 @@
 #ifndef test2_h
 #define test2_h
 
-#include "gtest/gtest.h"
-#include "page_segment.hpp"
-#include <iostream>
 #include "buffer.hpp"
+#include "page_segment.hpp"
+#include "gtest/gtest.h"
+#include <iostream>
 
 namespace {
-    TEST(PageSegmentTest, Checksum) {
-        byte* buffer = (byte*)malloc(page_segment_total_len);
-        
-        page_segment* seg = new page_segment(buffer);
-        seg->set_checksum(255);
-        uint* value = seg->get_checksum();
-        EXPECT_EQ(*value, 255);
-        free(buffer);
-    }
+TEST(PageSegmentTest, Checksum) {
+  byte *buffer = (byte *)malloc(page_segment_total_len);
+
+  page_segment *seg = new page_segment(buffer);
+  seg->set_checksum(255);
+  uint *value = seg->get_checksum();
+  EXPECT_EQ(*value, 255);
+  free(buffer);
 }
+} // namespace
 
 #endif /* test2_h */

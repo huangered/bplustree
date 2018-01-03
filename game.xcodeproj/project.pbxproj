@@ -13,7 +13,8 @@
 			buildPhases = (
 			);
 			dependencies = (
-				365140891FDA7D3100972773 /* PBXTargetDependency */,
+				3641CF901FFCCF8800DEC452 /* PBXTargetDependency */,
+				3641CF8E1FFCCF8500DEC452 /* PBXTargetDependency */,
 				369B6B2B1FDA5F5000042319 /* PBXTargetDependency */,
 				369B6B291FDA5F4D00042319 /* PBXTargetDependency */,
 			);
@@ -23,24 +24,38 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		365140841FDA684400972773 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 365140831FDA684400972773 /* main.cpp */; };
+		3641CF861FFCCE1500DEC452 /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6342F0501FFA236B00109BB4 /* tree.cpp */; };
+		3641CF871FFCCE1700DEC452 /* page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 635D42E21FF6816100A14D6C /* page.cpp */; };
+		3641CF881FFCCE1A00DEC452 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6343476D1FF9143D00732B89 /* buffer.cpp */; };
+		3641CF8C1FFCCEA100DEC452 /* libsql.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3641CF7B1FFCCDF200DEC452 /* libsql.a */; };
 		3651408C1FDE270E00972773 /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3651408A1FDE270E00972773 /* server.cpp */; };
 		3660C62B1FB7579C00D51018 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3660C62A1FB7579C00D51018 /* main.cpp */; };
 		3668FB361FD03FF70031D15C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3668FB351FD03FF70031D15C /* main.cpp */; };
 		36CADAF61FECAA2100D6FDCD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36CADAF51FECAA2100D6FDCD /* main.cpp */; };
 		36CADB701FECB77A00D6FDCD /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CADB711FECB77A00D6FDCD /* gtest.framework */; };
-		6342F0521FFA236B00109BB4 /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6342F0501FFA236B00109BB4 /* tree.cpp */; };
-		6343476F1FF9143D00732B89 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6343476D1FF9143D00732B89 /* buffer.cpp */; };
-		635D42E41FF6816100A14D6C /* page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 635D42E21FF6816100A14D6C /* page.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		365140881FDA7D3100972773 /* PBXContainerItemProxy */ = {
+		3641CF8A1FFCCE9C00DEC452 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3660C61F1FB7579C00D51018 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 365140801FDA684400972773;
-			remoteInfo = raft;
+			remoteGlobalIDString = 3641CF7A1FFCCDF200DEC452;
+			remoteInfo = sql;
+		};
+		3641CF8D1FFCCF8500DEC452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3660C61F1FB7579C00D51018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36CADAF21FECAA2100D6FDCD;
+			remoteInfo = test;
+		};
+		3641CF8F1FFCCF8800DEC452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3660C61F1FB7579C00D51018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3641CF7A1FFCCDF200DEC452;
+			remoteInfo = sql;
 		};
 		369B6B281FDA5F4D00042319 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -66,15 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3651407F1FDA684400972773 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		3660C6251FB7579C00D51018 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,8 +111,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		365140811FDA684400972773 /* simple-sql */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "simple-sql"; sourceTree = BUILT_PRODUCTS_DIR; };
-		365140831FDA684400972773 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3629B31F1FFC6A0A009DFAB9 /* aux_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aux_test.h; sourceTree = "<group>"; };
+		3641CF7B1FFCCDF200DEC452 /* libsql.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsql.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3651408A1FDE270E00972773 /* server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
 		3651408B1FDE270E00972773 /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = server.hpp; sourceTree = "<group>"; };
 		3660C6271FB7579C00D51018 /* server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = server; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +138,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3651407E1FDA684400972773 /* Frameworks */ = {
+		3641CF781FFCCDF200DEC452 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -157,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3641CF8C1FFCCEA100DEC452 /* libsql.a in Frameworks */,
 				36CADB701FECB77A00D6FDCD /* gtest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,16 +171,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		365140821FDA684400972773 /* simple-sql */ = {
+		3641CF731FFC72E900DEC452 /* aux */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = aux;
+			sourceTree = "<group>";
+		};
+		365140821FDA684400972773 /* sql */ = {
+			isa = PBXGroup;
+			children = (
+				3641CF731FFC72E900DEC452 /* aux */,
 				6342F0541FFA238100109BB4 /* tree */,
 				634347731FF918AC00732B89 /* page */,
 				634347721FF9189800732B89 /* buffer */,
 				634347711FF9188A00732B89 /* include */,
-				365140831FDA684400972773 /* main.cpp */,
 			);
-			path = "simple-sql";
+			path = sql;
 			sourceTree = "<group>";
 		};
 		3660C61E1FB7579C00D51018 = {
@@ -181,7 +195,7 @@
 			children = (
 				3660C6291FB7579C00D51018 /* server */,
 				3668FB341FD03FF70031D15C /* client */,
-				365140821FDA684400972773 /* simple-sql */,
+				365140821FDA684400972773 /* sql */,
 				36CADAF41FECAA2100D6FDCD /* test */,
 				3660C6281FB7579C00D51018 /* Products */,
 				36CADB491FECAC5C00D6FDCD /* Frameworks */,
@@ -193,8 +207,8 @@
 			children = (
 				3660C6271FB7579C00D51018 /* server */,
 				3668FB331FD03FF70031D15C /* client */,
-				365140811FDA684400972773 /* simple-sql */,
 				36CADAF31FECAA2100D6FDCD /* test */,
+				3641CF7B1FFCCDF200DEC452 /* libsql.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +246,7 @@
 				36CADAF51FECAA2100D6FDCD /* main.cpp */,
 				635D42E11FF680C700A14D6C /* page_segment_test.hpp */,
 				634347701FF9158B00732B89 /* buffer_test.hpp */,
+				3629B31F1FFC6A0A009DFAB9 /* aux_test.h */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -284,23 +299,33 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3641CF791FFCCDF200DEC452 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		365140801FDA684400972773 /* simple-sql */ = {
+		3641CF7A1FFCCDF200DEC452 /* sql */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 365140871FDA684400972773 /* Build configuration list for PBXNativeTarget "simple-sql" */;
+			buildConfigurationList = 3641CF831FFCCDF300DEC452 /* Build configuration list for PBXNativeTarget "sql" */;
 			buildPhases = (
-				3651407D1FDA684400972773 /* Sources */,
-				3651407E1FDA684400972773 /* Frameworks */,
-				3651407F1FDA684400972773 /* CopyFiles */,
+				3641CF771FFCCDF200DEC452 /* Sources */,
+				3641CF781FFCCDF200DEC452 /* Frameworks */,
+				3641CF791FFCCDF200DEC452 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "simple-sql";
-			productName = raft;
-			productReference = 365140811FDA684400972773 /* simple-sql */;
-			productType = "com.apple.product-type.tool";
+			name = sql;
+			productName = sql;
+			productReference = 3641CF7B1FFCCDF200DEC452 /* libsql.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		3660C6261FB7579C00D51018 /* server */ = {
 			isa = PBXNativeTarget;
@@ -347,6 +372,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3641CF8B1FFCCE9C00DEC452 /* PBXTargetDependency */,
 				636CDB891FEFF93200F620A5 /* PBXTargetDependency */,
 			);
 			name = test;
@@ -367,7 +393,7 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = peter.huang;
 				TargetAttributes = {
-					365140801FDA684400972773 = {
+					3641CF7A1FFCCDF200DEC452 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -403,22 +429,21 @@
 			targets = (
 				3660C6261FB7579C00D51018 /* server */,
 				3668FB321FD03FF70031D15C /* client */,
-				365140801FDA684400972773 /* simple-sql */,
 				369B6B241FDA5F3E00042319 /* all */,
 				36CADAF21FECAA2100D6FDCD /* test */,
+				3641CF7A1FFCCDF200DEC452 /* sql */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3651407D1FDA684400972773 /* Sources */ = {
+		3641CF771FFCCDF200DEC452 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6343476F1FF9143D00732B89 /* buffer.cpp in Sources */,
-				6342F0521FFA236B00109BB4 /* tree.cpp in Sources */,
-				365140841FDA684400972773 /* main.cpp in Sources */,
-				635D42E41FF6816100A14D6C /* page.cpp in Sources */,
+				3641CF881FFCCE1A00DEC452 /* buffer.cpp in Sources */,
+				3641CF871FFCCE1700DEC452 /* page.cpp in Sources */,
+				3641CF861FFCCE1500DEC452 /* tree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,10 +475,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		365140891FDA7D3100972773 /* PBXTargetDependency */ = {
+		3641CF8B1FFCCE9C00DEC452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 365140801FDA684400972773 /* simple-sql */;
-			targetProxy = 365140881FDA7D3100972773 /* PBXContainerItemProxy */;
+			target = 3641CF7A1FFCCDF200DEC452 /* sql */;
+			targetProxy = 3641CF8A1FFCCE9C00DEC452 /* PBXContainerItemProxy */;
+		};
+		3641CF8E1FFCCF8500DEC452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36CADAF21FECAA2100D6FDCD /* test */;
+			targetProxy = 3641CF8D1FFCCF8500DEC452 /* PBXContainerItemProxy */;
+		};
+		3641CF901FFCCF8800DEC452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3641CF7A1FFCCDF200DEC452 /* sql */;
+			targetProxy = 3641CF8F1FFCCF8800DEC452 /* PBXContainerItemProxy */;
 		};
 		369B6B291FDA5F4D00042319 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -473,18 +508,26 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		365140851FDA684400972773 /* Debug */ = {
+		3641CF841FFCCDF300DEC452 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		365140861FDA684400972773 /* Release */ = {
+		3641CF851FFCCDF300DEC452 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -661,11 +704,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		365140871FDA684400972773 /* Build configuration list for PBXNativeTarget "simple-sql" */ = {
+		3641CF831FFCCDF300DEC452 /* Build configuration list for PBXNativeTarget "sql" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				365140851FDA684400972773 /* Debug */,
-				365140861FDA684400972773 /* Release */,
+				3641CF841FFCCDF300DEC452 /* Debug */,
+				3641CF851FFCCDF300DEC452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
