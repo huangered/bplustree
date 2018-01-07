@@ -7,3 +7,8 @@
 //
 
 #include "page.hpp"
+
+page_slot *page::search_slot(const uint key) {
+  page_slot *s = index(slots, slots + SLOT_SIZE - 1, key);
+  return s;
+}

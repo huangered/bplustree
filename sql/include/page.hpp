@@ -9,43 +9,16 @@
 #ifndef linn_space_hpp
 #define linn_space_hpp
 
-#include "aux.h"
-#include "buffer.hpp"
 #include <iostream>
+
+#include "aux.hpp"
+#include "buffer.hpp"
+#include "page_header.hpp"
 #include "page_segment.hpp"
+#include "page_slot.h"
+#include "record.hpp"
 
-struct page_header {
-  uint slot;
-  uint free_space_ptr;
-  uint record_sum;
-  uint free_rec_ptr;
-  uint delete_space;
-  uint page_last_insert_ptr;
-  uint page_last_insert_orient;
-  uint same_orient_insert_count;
-  uint page_user_record_count;
-  uint transit_id;
-  uint level;
-  uint index_id;
-  uint index_leaf_page_segment_header;
-  uint index_no_leaf_page_segment_header;
-};
-struct record {
-  char *name;
-  int len;
-  int owned;
-
-  uint type;
-
-  int key;
-  int value;
-  record *next;
-  record() : key(0), value(0), next(nullptr) {}
-  record(int key, int value) : key(key), value(value), next(nullptr) {}
-};
-struct page_slot {
-  uint offset;
-};
+#define SLOT_SIZE 8
 
 class page {
 private:
@@ -110,6 +83,8 @@ private:
       temp = temp->next;
     }
   }
+
+  page_slot *search_slot(const uint key);
 };
 
 #endif /* linn_space_hpp */

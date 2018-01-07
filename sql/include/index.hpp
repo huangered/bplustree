@@ -9,8 +9,6 @@
 #ifndef index_hpp
 #define index_hpp
 
-class index {
-    
-};
+class index {};
 
 #endif /* Index_hpp */

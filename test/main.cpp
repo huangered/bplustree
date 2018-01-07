@@ -6,7 +6,7 @@
 //  Copyright © 2017 peter.huang. All rights reserved.
 //
 
-#include "aux_test.h"
+#include "aux_test.hpp"
 #include "btree.hpp"
 #include "buffer_test.hpp"
 #include "page_segment_test.hpp"

@@ -9,8 +9,18 @@
 #ifndef record_h
 #define record_h
 
-class record1 {
-    
+struct record {
+  char *name;
+  int len;
+  int owned;
+
+  uint type;
+
+  int key;
+  int value;
+  record *next;
+  record() : key(0), value(0), next(nullptr) {}
+  record(int key, int value) : key(key), value(value), next(nullptr) {}
 };
 
 #endif /* record_h */

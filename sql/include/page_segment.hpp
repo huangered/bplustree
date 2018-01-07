@@ -9,7 +9,7 @@
 #ifndef Page_segment_h
 #define Page_segment_h
 
-#include "aux.h"
+#include "aux.hpp"
 
 #define page_segment_checksum 0
 #define page_segment_space_offset 4
@@ -61,7 +61,7 @@ public:
   void set_space_id(uint space_id) {
     set_field(&space_id, page_segment_space_id, 4);
   }
-    
+
   uint *get_checksum() { return (uint *)(ptr + page_segment_checksum); }
 
 private:

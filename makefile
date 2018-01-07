@@ -1,6 +1,5 @@
 build:
-	clang-format -i **/*.cpp
-	clang-format -i **/*.hpp
+	find . -name *.*pp |xargs clang-format -i
 
 	xcodebuild -workspace root.xcworkspace -scheme all
 

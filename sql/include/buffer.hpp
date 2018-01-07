@@ -9,8 +9,8 @@
 #ifndef buffer_hpp
 #define buffer_hpp
 
+#include "aux.hpp"
 #include <new>
-#include "aux.h"
 
 // simple buffer class, will enhance in the future
 class buffer {
@@ -19,9 +19,7 @@ private:
   uint len;
 
 public:
-    buffer(uint len):len(len) {
-    data = (byte *)malloc(len * sizeof(byte));
-  }
+  buffer(uint len) : len(len) { data = (byte *)malloc(len * sizeof(byte)); }
   ~buffer() { free(data); }
   inline byte *getBuffer() const { return data; }
 

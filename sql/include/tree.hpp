@@ -11,8 +11,8 @@
 
 class btree {
 public:
-    void insert(void* key, void* value){}
-    void remove(void* key){}
-    void find(void* key){}
+  void insert(void *key, void *value) {}
+  void remove(void *key) {}
+  void find(void *key) {}
 };
 #endif /* tree_hpp */
