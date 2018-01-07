@@ -1,8 +1,7 @@
 build:
-	clang-format -i **/*.cpp
-	clang-format -i **/*.hpp
+	find . -name *.*pp |xargs clang-format -i
 
-	xcodebuild -project game.xcodeproj -alltargets
+	xcodebuild -workspace root.xcworkspace -scheme all
 
 clean:
 	rm -rf build
