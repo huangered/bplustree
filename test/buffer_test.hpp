@@ -13,11 +13,12 @@
 #include "gtest/gtest.h"
 
 namespace {
-//    TEST(BufferTest, init) {
-//
-//        linn::buffer *buffer = new linn::buffer(10);
-//        EXPECT_EQ(10, buffer->getSize());
-//    }
+TEST(BufferTest, init) {
+
+  buffer *buff = new buffer(10);
+  EXPECT_EQ(10, buff->length());
+  buff->get_offset(5);
 }
+} // namespace
 
 #endif /* buffer_test_h */

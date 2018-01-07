@@ -16,14 +16,16 @@
 class buffer {
 private:
   byte *data;
-  uint len;
+  u_long len;
 
 public:
-  buffer(uint len) : len(len) { data = (byte *)malloc(len * sizeof(byte)); }
+  buffer(u_long len) : len(len) { data = (byte *)malloc(len * sizeof(byte)); }
   ~buffer() { free(data); }
   inline byte *getBuffer() const { return data; }
 
-  inline uint length() const { return len; }
+  inline u_long length() const { return len; }
+
+  void *get_offset(u_long offset);
 };
 
 #endif /* buffer_hpp */
